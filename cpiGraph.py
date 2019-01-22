@@ -17,19 +17,19 @@ count = 0
 
 for line in f:
     for data in line.split():
-        name = str(data)        
-    
+        name = str(data)
+
         if(count%4 == 0):
             series_id.append(data)
-          
+
         elif(count%4 == 1):
             goteem = data
             year.append(data)
-            
+
         elif(count%4 == 2):
-            timeinterval.append(data)         
+            timeinterval.append(data)
             newList.append(float(goteem) + (float((data.split("M"))[1])*constant))
-                       
+
         elif(count%4 == 3):
             value.append(data)
 
@@ -39,9 +39,4 @@ for line in f:
 trace = {'type': 'scatter', 'x':(newList), 'y': (value)}
 
 
-plotly.offline.plot({'data': [trace]})  
-
-
-
-
-
+plotly.offline.plot({'data': [trace]})
