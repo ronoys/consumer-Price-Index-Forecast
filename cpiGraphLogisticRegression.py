@@ -1,5 +1,4 @@
 # test commit
-
 import plotly
 from plotly.offline import iplot, init_notebook_mode
 from plotly import tools
@@ -41,18 +40,6 @@ for line in f:
             value.append(data)
 
         count = count + 1
-
-
-newListArray = np.asarray(newList)
-valueArray = np.asarray(value)
-
-newListArray2D = np.reshape(newListArray,(-1,1))
-valueArray2D = np.reshape(valueArray,(-1,1))
-
-
-
-model = LinearRegression()
-model.fit(newListArray2D, valueArray2D)
 
 
 yearCount = 2019.0
@@ -105,11 +92,6 @@ g = ((sumx2*sumy)-(sumxy*sumx))/((n*sumx2)-(sumx2*sumx2))
 
 a = 10 ** m
 b = 10 ** g
-
-
-
-
-#print m,b
 
 y_list = []
 for i in x:
